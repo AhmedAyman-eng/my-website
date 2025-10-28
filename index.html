@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>أكاديمية تعلم البرمجة - HTML CSS JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>تعلم HTML • CSS • JavaScript</h1>
+  <p>صفحة واحدة. كتابة كود مباشرة. مشاريع حقيقية.</p>
+</header>
+
+<nav>
+  <button class="nav-btn active" data-section="html">HTML</button>
+  <button class="nav-btn" data-section="css">CSS</button>
+  <button class="nav-btn" data-section="js">JavaScript</button>
+  <button class="nav-btn" data-section="projects">مشاريع</button>
+</nav>
+
+<div class="container">
+
+  <!-- ==================== HTML ==================== -->
+  <section id="html" class="panel section active">
+    <h2>HTML – الهيكل</h2>
+    <p>اكتب HTML أدناه → شاهد النتيجة على اليمين.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="html1">العناوين والفقرات</button>
+      <button class="tab-btn" data-tab="html2">القوائم والروابط</button>
+      <button class="tab-btn" data-tab="html3">الصور والنماذج</button>
+    </div>
+
+    <div id="html1" class="tab-content active">
+      <textarea id="html-code1">
+<!DOCTYPE html>
+<html>
+<head><title>صفحتي</title></head>
+<body>
+  <h1>مرحبًا بالعالم!</h1>
+  <p>هذه فقرة نصية.</p>
+</body>
+</html></textarea>
+    </div>
+    <div id="html2" class="tab-content">
+      <textarea id="html-code2">
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>أطعمتي المفضلة</h2>
+  <ul>
+    <li>بيتزا</li>
+    <li>سوشي</li>
+    <li>آيس كريم</li>
+  </ul>
+  <a href="https://example.com">زيارة المثال</a>
+</body>
+</html></textarea>
+    </div>
+    <div id="html3" class="tab-content">
+      <textarea id="html-code3">
+<!DOCTYPE html>
+<html>
+<body>
+  <img src="https://picsum.photos/200" alt="صورة عشوائية">
+  <form>
+    <input type="text" placeholder="اسمك">
+    <button>إرسال</button>
+  </form>
+</body>
+</html></textarea>
+    </div>
+
+    <iframe id="html-preview"></iframe>
+
+    <div class="tip">
+      <strong>نصيحة:</strong> بعد هذا الدرس، اصنع <em>صفحة سيرة ذاتية</em> – العملاء يدفعون 200–600 ريال!
+    </div>
+  </section>
+
+  <!-- ==================== CSS ==================== -->
+  <section id="css" class="panel section">
+    <h2>CSS – التنسيق</h2>
+    <p>عدّل الـ CSS → شاهد التغيير فورًا.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="css1">الألوان والخطوط</button>
+      <button class="tab-btn" data-tab="css2">نموذج الصندوق</button>
+      <button class="tab-btn" data-tab="css3">Flexbox</button>
+    </div>
+
+    <div id="css1" class="tab-content active">
+      <textarea id="css-code1">
+body { background: #f0f8ff; font-family: Tahoma; }
+h1   { color: navy; text-align: center; }
+p    { color: #333; }</textarea>
+    </div>
+    <div id="css2" class="tab-content">
+      <textarea id="css-code2">
+.box {
+  width: 200px; height: 100px;
+  background: coral;
+  margin: 20px; padding: 15px;
+  border: 5px solid #333;
+}</textarea>
+    </div>
+    <div id="css3" class="tab-content">
+      <textarea id="css-code3">
+.container { display: flex; gap: 1rem; }
+.card { flex: 1; background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,.1); }</textarea>
+    </div>
+
+    <iframe id="css-preview"></iframe>
+
+    <div class="tip">
+      <strong>اكسب المال:</strong> اعرض <em>إعادة تصميم صفحة هبوط</em> على فايفر – 150–400 ريال لكل طلب.
+    </div>
+  </section>
+
+  <!-- ==================== JavaScript ==================== -->
+  <section id="js" class="panel section">
+    <h2>JavaScript – التفاعل</h2>
+    <p>اكتب JS → شاهد التنفيذ فورًا.</p>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="js1">المتغيرات والتنبيهات</button>
+      <button class="tab-btn" data-tab="js2">تعديل الـ DOM</button>
+      <button class="tab-btn" data-tab="js3">الأحداث والنماذج</button>
+    </div>
+
+    <div id="js1" class="tab-content active">
+      <textarea id="js-code1">
+let name = "صديق";
+alert("مرحبًا، " + name + "!");</textarea>
+    </div>
+    <div id="js2" class="tab-content">
+      <textarea id="js-code2">
+document.body.style.background = "#ffebcd";
+document.querySelector("h1").innerText = "JS سيطر!";</textarea>
+    </div>
+    <div id="js3" class="tab-content">
+      <textarea id="js-code3">
+let btn = document.createElement("button");
+btn.textContent = "اضغطني";
+btn.id = "clickme";
+document.body.appendChild(btn);
+
+btn.addEventListener("click", function(){
+  alert("لقد نقرت!");
+});</textarea>
+    </div>
+
+    <iframe id="js-preview"></iframe>
+
+    <div class="tip">
+      <strong>اكسب المال:</strong> اصنع <em>آلة حاسبة تفاعلية</em> (مؤشر كتلة الجسم، القروض) – بعها على CodeCanyon.
+    </div>
+  </section>
+
+  <!-- ==================== مشاريع ==================== -->
+  <section id="projects" class="panel section">
+    <h2>اصنع واكسب – مشاريع صغيرة</h2>
+    <ol>
+      <li><strong>موقع شخصي</strong> – HTML + CSS (يوم واحد)</li>
+      <li><strong>قائمة مهام</strong> – HTML + CSS + JS (يومان)</li>
+      <li><strong>ويدجت الطقس</strong> – JS + API مجاني (3 أيام)</li>
+    </ol>
+    <p>ضعها على <a href="https://github.com" target="_blank">GitHub</a> → شارك الرابط → احصل على طلبات!</p>
+
+    <div class="tip">
+      <strong>الخطوة التالية:</strong> بعد أي مشروع، انشر في <a href="https://www.upwork.com" target="_blank">Upwork</a> أو <a href="https://mostaql.com" target="_blank">مستقل</a>.
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>صُنع بـ ❤️ بواسطة Ahmed • <a href="https://github.com">نسخة على GitHub</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

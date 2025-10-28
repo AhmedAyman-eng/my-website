@@ -1,0 +1,57 @@
+:root {
+  --bg: #f4f7fa;
+  --primary: #007bff;
+  --dark: #212529;
+  --light: #e9ecef;
+  --success: #28a745;
+  --danger: #dc3545;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body, html {
+  margin: 0; padding: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--bg); color: var(--dark);
+  direction: rtl;
+  text-align: right;
+}
+
+header { background: var(--primary); color: #fff; padding: 1rem; text-align: center; }
+nav { background: var(--dark); padding: 0.5rem; text-align: center; }
+nav button {
+  margin: 0 0.5rem; padding: 0.5rem 1rem;
+  background: var(--light); border: none; border-radius: 4px; cursor: pointer;
+  font-weight: bold;
+}
+nav button.active { background: var(--primary); color: #fff; }
+
+.container {
+  max-width: 1200px; margin: auto; padding: 1rem;
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.panel { flex: 1 1 300px; background: #fff; border-radius: 8px; padding: 1rem; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+section { display: none; }
+section.active { display: block; }
+
+textarea, iframe {
+  width: 100%; height: 300px; border: 1px solid #ccc; border-radius: 4px; margin-top: 0.5rem;
+}
+textarea { font-family: monospace; font-size: 14px; padding: 0.5rem; }
+
+.tabs { margin: 1rem 0; }
+.tabs button {
+  margin-left: 0.5rem; padding: 0.3rem 0.6rem; font-size: 0.9rem;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.tip {
+  background: #d4edda; padding: 0.8rem; border-right: 4px solid var(--success); margin-top: 1rem;
+}
+.cheat { background: #fff3cd; padding: 0.8rem; border-right: 4px solid #ffc107; margin-top: 1rem; }
+
+footer {
+  text-align: center; padding: 1rem; background: var(--dark); color: #fff; margin-top: 2rem;
+}
+footer a { color: #fff; text-decoration: underline; }
